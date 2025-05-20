@@ -61,8 +61,54 @@ console.log(a + b); //30
     //so conversion of one data type to another type process known as type casting or type conversion.
 }
 
+//swappiing
+{
+    let a = 10;
+    let b = 20;
+    console.log(a, b);
+    let c = a; //c = 10, a = 10
+    a = b; // a = 20, b = 20
+    b = c; // b = 10, c = 10
+    console.log(a, b);
+    console.log(c);
+}
 
+//seconnd method for swapping (without using third variable)
+{
+ let a = 10;
+ let b = 20;
+ a = a + b; // a = 30, b = 20
+ b = a - b; // a = 30, b = 10
+ a = a - b; // a = 20, b = 10
+ console.log(a, b);
+}
 
+//third method for swapping (this is destructuring)
+/*Destructuring ka matlab hota hai kisi array ya object ke andar se values ko nikaal kar alag 
+variables mein assign karna ek hi line mein.
+*/
+{
+ let a = 10;
+    let b = 20;
+    [a, b] = [b, a];
+    console.log(a, b);
+}
+
+//+ - * / %
+{
+    let a = 10;
+    let b = 20;
+    console.log(a + b); //30
+    console.log(a - b); //-10
+    console.log(a * b);  //200
+    console.log(a / b); //0.5
+    console.log(a % b); //10 this is remainder
+    //if in divide we want without decimal then we can use math.floor() function
+    console.log(Math.floor(a / b)); //0
+    console.log(typeof(Math.floor(a / b))); //number
+    //if we want to round it
+    console.log(Math.round(a / b)); //1
+}
 
 
 
