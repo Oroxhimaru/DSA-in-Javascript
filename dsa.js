@@ -43,6 +43,7 @@ console.log(a + b); //30
 
       //but what if we do message with number 
         console.log("first" - 1) // we will get NaN , same for / *
+        console.log(typeof("first" * 1)) //number 
 }
 
 
@@ -110,7 +111,28 @@ variables mein assign karna ek hi line mein.
     console.log(Math.round(a / b)); //1
 }
 
+//relation operatore < > <= >= == !=
+{
+ console.log(10 < 20); //true
+ console.log(10 > 20); //false
+ console.log(10 <= 20); //true
+ console.log(10 >= 20); //false
+ console.log(10 == 20); //false
+ console.log(10 != 20); //true mean not equal
+ console.log(10 == "10"); //true
+ console.log(10 === "10"); //false
+ console.log(10 !== "10"); //true
+ console.log(10 !== 10); //false
+}
 
+//logical operator && || !
+{
+    console.log(5>5  && 5<10); //false
+    console.log(5==5 &&  5<10); //true)
+    console.log(5>5 || 5<10); //true   
+    console.log(5==5 || 5<10); //true
+    console.log(!(5>5)); //true
+}
 
 
 
