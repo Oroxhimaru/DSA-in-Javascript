@@ -134,7 +134,123 @@ variables mein assign karna ek hi line mein.
     console.log(!(5>5)); //true
 }
 
+// urary operator ++ --
+{
+    let a = 10;
+    console.log(a++); //10  //post increment
+    console.log(a); //11 
+    console.log(++a); //12  //pre increment
+    console.log(a); //12
+    console.log(a--); //12      //post decrement
+    console.log(a); //11
+    console.log(--a); //10      //pre decrement
+    console.log(a); //10
+}
 
+{
+    let i = 11;
+    i = i++ + ++i; //11 + 13 = 24 
+    console.log(i); //24
+}
 
+{
+    let a = 11, b = 22;
+    let c = a + b + a++ + b++ + ++a + ++b; //11 + 22 + 11 + 22 + 13 + 24 = 123
+    console.log("a=" + a) //13
+    console.log("b=" + b) //24
+    console.log("c=" + c); //123
+}
 
+{
+    let b = true;
+    b++;
+    console.log(b); //2
+    //because true is 1 and false is 0
+    let c = false;
+    --c;
+    console.log(c); //-1
+}
 
+{
+    // let a = 10++;
+    // console.log(a); 
+    //it will give error because we cannot assign value to constant 
+    //(error)  Uncaught SyntaxError: Invalid left-hand side expression in postfix operation
+}
+
+{
+    // let i= 10;
+    // let o = --(i++);
+    // console.log(o); 
+    //this will give error because we cannot assign value to constant
+    //(error)  Uncaught SyntaxError: Invalid left-hand side expression in prefix operation
+    //because bodmas rule bracket will be solve and in bracket we will have 10 and then --10 which is not valid
+}
+
+//math function
+{
+    //for rounding (if more than or equal to .5 it will go up)
+    console.log(Math.round(10.5)); //11
+    //for floor (it will go down no matter what)
+    console.log(Math.floor(10.5)); //10
+    //for ceil (it will go up no matter what)
+    console.log(Math.ceil(10.1)); //11
+    //for random (it will give random number between 0 and 1)
+    console.log(Math.random()); //0.123456789
+    //for trunc (it goes neither up or down just  cut the decimal))
+    console.log(Math.trunc(10.5)); //10
+    //for power (it will give power of number)
+    console.log(Math.pow(2, 3)); //2^3 = 8
+    //for square root
+    console.log(Math.sqrt(4)); //square root of 4 is 2
+    //for cube root
+    console.log(Math.cbrt(8)); //cube root of 8 is 2
+    //for absolute (it will give positive value)
+    console.log(Math.abs(-10)); //10
+    //for min (it will give minimum value)
+    console.log(Math.min(10, 20, 30)); //10
+    //for max (it will give maximum value)
+    console.log(Math.max(10, 20, 30)); //30
+    //random for otp 
+    let otp = Math.floor(Math.random() * 1000000);
+    console.log(otp); //123456 
+    //random for otp with 6 digit, we need to multiply by how much zero after 1,
+    //like for 6 digit we need to multiply by 1000000
+    let otp2 = Math.floor(Math.random() * 10000);
+    console.log(otp2); //1234
+    //or we can do like this
+    let otp3 = Math.trunc((Math.random() * 9000)+1000);
+    console.log(otp3); //1234
+    //for getting number of decimal 
+    let decimal = 10.56789;
+    console.log(decimal.toFixed(2)); //10.57
+    console.log(decimal.toFixed(3)); //10.568
+}
+
+{
+    //calculate area and perimeter of rectangle
+    let length = 10;
+    let breadth = 20;
+    let area = length * breadth; //200
+    let perimeter = 2 * (length + breadth); //60
+    console.log("area=" + area); //200
+    console.log("perimeter=" + perimeter); //60
+}
+
+{
+    //area of triangle by heron's formula
+    let a = 5;
+    let b = 6;
+    let c = 7;
+    let s = (a + b + c) / 2; //8.5
+    let area = Math.sqrt(s * (s - a) * (s - b) * (s - c)); //14.696938456699069
+    console.log("area=" + area); //14.696938456699069
+}
+
+{
+    //circumference of circle
+    let radius = 10;
+    let circumference = 2 * Math.PI * radius; //62.8318
+    console.log(circumference); 
+    console.log(circumference.toFixed(2)); //62.83
+}
