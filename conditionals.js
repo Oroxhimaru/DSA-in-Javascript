@@ -61,4 +61,120 @@
     }
 }
 
+// electricity bill
+{
+    let unit = 200;
+    let billperunit = 4.2;
+    if(unit <= 100){
+        console.log(unit * billperunit);
+    }
+    else if(unit >= 101 && unit <= 200){
+        billperunit = 5;
+        console.log(unit * billperunit);
+     }
+     else if(unit >= 201 && unit <= 300){
+        billperunit = 6;
+        console.log(unit * billperunit);
+     }
+}
 
+//pkr denomination
+{
+    let amount = 2345;
+    let deno = [1000, 500, 100, 50, 20, 10, 5, 2, 1];
+    let count = 0;
+    if(amount >= 1000){
+        count = Math.floor(amount / 1000);
+        amount = amount % 1000;
+        console.log(deno[0] + " " + count + " and" + " " + amount);
+    }
+    if(amount >= 500){
+        count = Math.floor(amount / 500);
+        amount = amount % 500;
+        console.log(deno[1] + " " + count + " and" + " " + amount);
+    }
+    if(amount >= 100){
+        count = Math.floor(amount / 100);
+        amount = amount % 100;
+        console.log(deno[2] + " " + count + " and" + " " + amount);
+    }
+    if(amount >= 50){
+        count = Math.floor(amount / 50);
+        amount = amount % 50;
+        console.log(deno[3] + " " + count + " and" + " " + amount);
+    }
+    if(amount >= 20){
+        count = Math.floor(amount / 20);
+        amount = amount % 20;
+        console.log(deno[4] + " " + count + " and" + " " + amount);
+    }
+    if(amount >= 10){
+        count = Math.floor(amount / 10);
+        amount = amount % 10;
+        console.log(deno[5] + " " + count + " and" + " " + amount);
+    }
+    if(amount >= 5){
+        count = Math.floor(amount / 5);
+        amount = amount % 5;
+        console.log(deno[6] + " " + count + " and" + " " + amount);
+    }
+    if(amount >= 2){
+        count = Math.floor(amount / 2);
+        amount = amount % 2;
+        console.log(deno[7] + " " + count + " and" + " " + amount);
+    }
+    if(amount >= 1){
+        count = Math.floor(amount / 1);
+        amount = amount % 1;
+        console.log(deno[8] + " " + count + " and" + " " + amount);
+    }
+}
+
+
+// ternary operator ? :
+{
+  let a = 10;
+  let b = 20;
+  let c = a > b ? a : b; // if a is greater than b then c will be a else b
+  console.log(c);
+}
+
+//nested ternary operator
+{
+    let a = 10;
+    let b = 20;
+    let c = a > b ? a > 15 ? "a is greater than 15" : "a is less than 15" : b > 15 ? "b is greater than 15" : "b is less than 15";
+    console.log(c);
+    //first check if a is greater than b then check if a is greater than 15 then print 
+    // "a is greater than 15" else print "a is less than 15" else check if b is greater than 15 then 
+    // print "b is greater than 15" else print "b is less than 15"
+}
+
+{
+    let number = 0
+    let integer = number > 0 ? "positive" : number < 0 ? "negative" : "zero";
+    console.log(integer);
+}
+
+
+//switch case
+{
+    let day = 1;
+    switch(day){
+        case 1:
+            console.log("monday");
+            break;
+        case 2:
+            console.log("tuesday");
+            break;
+        case 3:
+            console.log("wednesday");
+            break;
+        case 4:
+            console.log("thursday");
+            break;
+        default:
+            console.log("invalid input");
+    }    
+    //if we remove break all the cases will be executed
+}
