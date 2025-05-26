@@ -178,3 +178,66 @@
     }    
     //if we remove break all the cases will be executed
 }
+
+//multiple conditions same execution
+{
+    let day = 1;
+    switch(day){
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+            console.log("weekday");
+            break;
+        case 6:
+        case 7:
+            console.log("weekend");
+            break;
+        default:
+            console.log("invalid input");
+    }
+}
+
+//a way to put conditions in switch case
+{
+    let day = 6;
+    switch(true){
+        case day >= 1 && day <= 5:
+            console.log("weekday");
+            break;
+        case day >= 6 && day <= 7:
+            console.log("weekend");
+            break;
+        default:
+            console.log("invalid input");
+    }
+}
+
+//precision issue 
+{
+    let num = 0.1 + 0.2;
+    switch(true){
+        case num == 0.3:
+            console.log("equal");
+            break;
+        default:
+            console.log("not equal");
+    }
+    //the answer would be not equal because of precision issue meaning 0.1 + 0.2 is not equal to 0.3 
+    // but it is equal to 0.30000000000000004
+    //to solve this we can use toFixed() method
+}
+
+//solve precision issue
+{
+    let num = 0.1 + 0.2;
+    switch(true){
+        case num.toFixed(1) == 0.3:
+            console.log("equal");
+            break;
+        default:
+            console.log("not equal");
+    }
+    //toFixed() method is used to round a number to a specified number of decimal places.
+}
